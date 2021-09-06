@@ -21,15 +21,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-      WebSite newSite = new WebSite("yandex.ru/news", true);
-      WebSite ytSite = new WebSite("youtube.com", false );
+        WebSite newSite = new WebSite("yandex.ru/news", true);
+        WebSite ytSite = new WebSite("youtube.com", false);
 
 
-      newSite.setViewCount(10);
+        newSite.setViewCount(10);
+        newSite.open();
+        ytSite.open();
 
-      WebSite open = newSite.open();
-
-      newSite.open().setViewCount(1);
+        newSite.printItems();
+        //  newSite.open().setViewCount(1);
 
 
         boolean isSiteNews = newSite.isThisSiteIsNews();
@@ -37,5 +38,4 @@ public class Main {
         System.out.println(newSite.viewCount);
         System.out.println(ytSite.viewCount);
     }
-
 }
