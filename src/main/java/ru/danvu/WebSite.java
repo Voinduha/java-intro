@@ -12,6 +12,20 @@ public class WebSite {
         this.isNewsSite = isNewsSite;
     }
 
-    public WebSite() {
+
+    void setViewCount(int count) {
+        this.viewCount = count;
+
+    }
+
+    boolean isThisSiteIsNews() {
+        System.out.println("!!!!!");
+        return isNewsSite;
+    }
+
+    WebSite open() {
+        System.out.println("Opened");
+        return this;
     }
 }
+

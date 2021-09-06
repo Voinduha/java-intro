@@ -20,10 +20,22 @@ public class Main {
     String aString = "Hello";
 
     public static void main(String[] args) {
-      WebSite site = new WebSite();
+
       WebSite newSite = new WebSite("yandex.ru/news", true);
       WebSite ytSite = new WebSite("youtube.com", false );
-      String aString = "Hello";
+
+
+      newSite.setViewCount(10);
+
+      WebSite open = newSite.open();
+
+      newSite.open().setViewCount(1);
+
+
+        boolean isSiteNews = newSite.isThisSiteIsNews();
+        System.out.println(isSiteNews);
+        System.out.println(newSite.viewCount);
+        System.out.println(ytSite.viewCount);
     }
 
 }
